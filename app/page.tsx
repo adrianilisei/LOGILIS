@@ -43,42 +43,105 @@ export default function App() {
       {/* Hero Section */}
       <section
         id="home"
-        className="h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-400 to-indigo-800 text-white text-center px-6"
+        className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-br from-blue-400 to-indigo-800 text-white px-6 py-12 md:py-0"
       >
-        <motion.h2
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-5xl font-bold mb-6"
+        <div
+          className="flex w-full max-w-6xl mx-auto flex-col md:flex-row items-center justify-center gap-12"
         >
-          Bine ai venit la LOGILIS
-        </motion.h2>
-        <p className="text-lg max-w-2xl mb-6">
-          Partenerul tău de încredere în logistică și transport. Momentan predominăm pe zona Moldovei.
-        </p>
-        <a
-          href="#contact"
-          className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100"
-        >
-          Contactează-ne
-        </a>
+          {/* Text */}
+          <div className="flex-1 max-w-xl text-center md:text-left">
+            <motion.h2
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="text-4xl md:text-5xl font-bold mb-6"
+            >
+              Livrăm calitate, nu doar marfă
+            </motion.h2>
+            <p className="text-lg mb-6">
+              Partenerul tău de încredere în logistică și transport. 
+              Predominăm în zona Moldovei și oferim soluții flexibile pentru clienții noștri.
+            </p>
+
+            {/* USP-uri */}
+            <ul className="space-y-3 mb-8 text-left inline-block md:block">
+              <li className="flex items-center">
+                <span className="text-2xl mr-2">🚚</span>
+                <span>Livrări la domiciliu în 2 oameni</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-2xl mr-2">📦</span>
+                <span>99% dintre comenzi livrate cu succes</span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-2xl mr-2">🤝</span>
+                <span>Calitate, comunicare și transparență</span>
+              </li>
+            </ul>
+
+            {/* CTA buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <a
+                href="#contact"
+                className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-100"
+              >
+                Contactează-ne
+              </a>
+              <a
+                href="#about"
+                className="bg-blue-600 border-2 border-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-700"
+              >
+                Află mai multe
+              </a>
+            </div>
+          </div>
+
+          {/* Image (always visible) */}
+          <div className="flex-1 flex justify-center">
+            <img
+              src="/logilis_lgx_mercedes.jpeg"
+              alt="Camion LOGILIS"
+              className="rounded-2xl shadow-lg max-h-80 md:max-h-96 object-cover w-full sm:w-auto"
+            />
+          </div>
+        </div>
       </section>
+
 
       {/* About Section */}
       <section id="about" className="py-20 mx-auto px-6 bg-gradient-to-b from-gray-800 to-gray-900 text-gray-300">
-        <h3 className="text-3xl font-bold text-center mb-6">Despre noi</h3>
-        <p className="text-center max-w-3xl mx-auto mb-4">
+        <h3 className="text-3xl font-bold text-center mb-12">Despre noi</h3>
+        
+        <p className="text-center max-w-3xl mx-auto mb-12">
           La LOGILIS, oferim servicii de transport și logistică la cele mai înalte standarde.
           Cu o echipă dedicată și o flotă modernă, garantăm punctualitate și profesionalism.
           Ne concentrăm în special pe zona Moldovei, dar avem capacitatea de extindere națională.
         </p>
-        <p className="text-center max-w-3xl mx-auto mb-4">
-          Fondată în anul 2024, compania noastră a crescut rapid și a investit în tehnologii moderne pentru a asigura un transport sigur și eficient. Dispunem de vehicule diverse și de echipamente de monitorizare pentru a urmări fiecare livrare.
-        </p>
-        <p className="text-center max-w-3xl mx-auto">
-          Suntem dedicați sustenabilității și eficienței operaționale. Încurajăm utilizarea de soluții eco-friendly și optimizăm rutele pentru reducerea consumului de combustibil.
-        </p>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="p-6 bg-gray-700 rounded-xl shadow text-center">
+            <h4 className="text-xl font-semibold text-white mb-2">Livrări la domiciliu</h4>
+            <p className="text-gray-300 text-sm">
+              Specializați în livrări la domiciliu în 2 oameni, pentru mărfuri paletizate și atipice.
+            </p>
+          </div>
+
+          <div className="p-6 bg-gray-700 rounded-xl shadow text-center">
+            <h4 className="text-xl font-semibold text-white mb-2">Performanță</h4>
+            <p className="text-gray-300 text-sm">
+              Am reușit să livrăm cu succes peste 99% din comenzile partenerilor noștri.
+            </p>
+          </div>
+
+          <div className="p-6 bg-gray-700 rounded-xl shadow text-center">
+            <h4 className="text-xl font-semibold text-white mb-2">Valori</h4>
+            <p className="text-gray-300 text-sm">
+              Ne focusăm pe calitate, comunicare și transparență cu contractorii noștri.
+            </p>
+          </div>
+        </div>
       </section>
+
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50">
