@@ -71,7 +71,7 @@ export default function App() {
               </li>
               <li className="flex items-center">
                 <span className="text-2xl mr-2">📦</span>
-                <span>99% dintre comenzi livrate cu succes</span>
+                <span>Peste 99% din comenzi prestate cu succes</span>
               </li>
               <li className="flex items-center">
                 <span className="text-2xl mr-2">🤝</span>
