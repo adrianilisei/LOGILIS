@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="font-sans text-gray-800">
       {/* Navbar */}
-      <nav className="fixed w-full bg-gradient-to-b from-white to-gray-100 shadow-md z-50">
+      <nav className="sticky top-0 w-full bg-gradient-to-b from-white to-gray-100 shadow-md z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 text-sm bg-blue-600 text-white flex items-center leading-none justify-center font-bold rounded-full">
