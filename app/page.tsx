@@ -59,7 +59,7 @@ export default function App() {
               Livrăm calitate, nu doar marfă
             </motion.h2>
             <p className="text-lg mb-6">
-              Partenerul tău de încredere în logistică și transport. 
+              Partenerul tău de încredere în logistică și transport.
               Predominăm în zona Moldovei și oferim soluții flexibile pentru clienții noștri.
             </p>
 
