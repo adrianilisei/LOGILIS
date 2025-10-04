@@ -6,7 +6,7 @@ const PIXEL = Buffer.from('R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICR
 
 export async function GET(request: NextRequest) {
   const timestamp = new Date().toISOString();
-  const ip = request.ip || request.headers.get('x-forwarded-for') || 'Unknown';
+  const ip = request.headers.get('ip') || request.headers.get('x-forwarded-for') || 'Unknown';
   const userAgent = request.headers.get('user-agent') || 'Unknown';
 
   const logEntry = `[${timestamp}] Email opened - IP: ${ip}, UA: ${userAgent}\n`;
