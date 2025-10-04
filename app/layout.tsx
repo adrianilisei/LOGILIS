@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "LOGILIS - Livrăm calitate, nu doar marfă",
   description: "Partenerul tău de încredere în logistică și transport. Predominăm în zona Moldovei și oferim soluții flexibile pentru clienții noștri.",
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({
